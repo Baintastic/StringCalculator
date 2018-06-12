@@ -1,0 +1,6 @@
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\bin\Debug\StringCalculator.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\bin\Debug\StringCalculator.pdb
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.csprojAssemblyReference.cache
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.csproj.CoreCompileInputs.cache
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.pdb

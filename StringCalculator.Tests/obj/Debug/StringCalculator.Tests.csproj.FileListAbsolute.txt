@@ -1,0 +1,17 @@
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\obj\Debug\StringCalculator.Tests.csprojAssemblyReference.cache
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\obj\Debug\StringCalculator.Tests.csproj.CoreCompileInputs.cache
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\NUnit3.TestAdapter.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\nunit.engine.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\nunit.engine.api.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\Mono.Cecil.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\StringCalculator.Tests.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\StringCalculator.Tests.pdb
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\nunit.framework.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\StringCalculator.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\StringCalculator.pdb
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\nunit.framework.pdb
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\bin\Debug\nunit.framework.xml
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\obj\Debug\StringCalculator.Tests.csproj.CopyComplete
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\obj\Debug\StringCalculator.Tests.dll
+c:\users\thabanit\source\repos\StringCalculator\StringCalculator.Tests\obj\Debug\StringCalculator.Tests.pdb
