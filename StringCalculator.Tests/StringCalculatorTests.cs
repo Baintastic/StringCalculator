@@ -11,14 +11,15 @@ namespace StringCalculator.Tests
     public class StringCalculatorTests
     {
         [Test]
-        public void Add_GivenAnEmptyString_ShouldReturn0(){
+        public void Add_GivenAnEmptyString_ShouldReturn0()
+        {
             //---------------Arrange-------------------
             var sut = CreateStringCalculator();
             var expected = 0;
             //---------------Act ----------------------
             var actual = sut.Add("");
             //---------------Assert -----------------------
-            Assert.AreEqual(expected,actual);         
+            Assert.AreEqual(expected, actual);
         }
 
         [TestCase(1, "1")]
@@ -48,7 +49,6 @@ namespace StringCalculator.Tests
 
         [TestCase(15, "1,2,3,4,5")]
         [TestCase(85, "25,25,20,10,5")]
-        [TestCase(735, "295,100,50,250,40")]
         [TestCase(10, "1,1,1,1,1,1,1,1,1,1")]
         public void Add_GivenUnknownNumbers_ShouldReturnTheSum(int expected, string numbers)
         {
@@ -73,10 +73,10 @@ namespace StringCalculator.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(3, "//;\n1#2")]
-        [TestCase(7, "//#\n2;1,3\n1")]
-        [TestCase(16, "//@\n5,2\n6;3")]
-        public void Add_GivenNumbersWithMultipleDelimiters_ShouldReturnTheSum(int expected, string numbers)
+        [TestCase(3, "//;\n1;2")]
+        [TestCase(7, "//#\n2#1#3\n1")]
+        [TestCase(16, "//@\n5@2\n6@3")]
+        public void Add_GivenNumbersWithDifferentDelimiters_ShouldReturnTheSum(int expected, string numbers)
         {
             //---------------Arrange-------------------
             var sut = CreateStringCalculator();
@@ -86,10 +86,10 @@ namespace StringCalculator.Tests
             Assert.AreEqual(expected, actual);
         }
 
-       // [TestCase(1, "//[@#$%];\n-1#2")]
-        //[TestCase(7, "//[****]\n2;1,3\n1")]
-       // [TestCase(16, "//@#@\n5,2\n6;3")]
-        public void Add_GivenNumbersHavngNegative_ShouldReturnNegativesNotAllowed(int expected, string numbers)
+        [TestCase(1002, "2;1000")]
+        [TestCase(2, "2;1001")]
+        [TestCase(13, "//;\n13;1002")]
+        public void Add_GivenNumbers_ShouldReturnTheSumOfNumbersLessThan1001(int expected, string numbers)
         {
             //---------------Arrange-------------------
             var sut = CreateStringCalculator();
@@ -99,9 +99,9 @@ namespace StringCalculator.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(3, "//[@#$%];\n1#2")]
-        [TestCase(7, "//[****]\n2;1,3\n1")]
-        [TestCase(16, "//@#@\n5,2\n6;3")]
+        [TestCase(10, "//[@][#][$][%][;]\n1#1@6%2")]
+        [TestCase(7, "//[******]\n2******1******3******1")]
+        [TestCase(16, "//[@@][*]\n5@@2\n6*3")]
         public void Add_GivenNumbersWithMultipleDelimitersOfAnylength_ShouldReturnTheSum(int expected, string numbers)
         {
             //---------------Arrange-------------------
@@ -114,7 +114,6 @@ namespace StringCalculator.Tests
 
         private static StringCalculator CreateStringCalculator()
         {
-            //---------------Arrange-------------------
             return new StringCalculator();
         }
 

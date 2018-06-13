@@ -4,3 +4,9 @@ c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\Strin
 c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.csproj.CoreCompileInputs.cache
 c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.dll
 c:\users\thabanit\source\repos\StringCalculator\StringCalculator\obj\Debug\StringCalculator.pdb
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\bin\Debug\StringCalculator.dll
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\bin\Debug\StringCalculator.pdb
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\obj\Debug\StringCalculator.csprojAssemblyReference.cache
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\obj\Debug\StringCalculator.csproj.CoreCompileInputs.cache
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\obj\Debug\StringCalculator.dll
+C:\Users\thabanit\MyClonedRep\StringCalculator\StringCalculator\obj\Debug\StringCalculator.pdb

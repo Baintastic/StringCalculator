@@ -11,39 +11,41 @@ namespace StringCalculator
     {
         public int Add(string numbers)
         {
-            int sum = 0;
+            var sum = 0;
             if (string.IsNullOrEmpty(numbers))
             {
                 return sum;
             }
-            if (numbers.Contains("-")) {
-                throw new Exception("negatives not allowed");
-            }
-            string[] numbersToAdd = Get(numbers);
-
-            for (int i = 0; i < numbersToAdd.Length; i++)
-            {
-                sum += int.Parse(numbersToAdd[i]);
-            }
+            var numbersToAdd = Get(numbers);
+            sum = Calculate(numbersToAdd);
             return sum;
-        }
-
-        private static string[] Split(string numbers)
-        {
-            return Regex.Split(numbers, ",|\n|;|#|@|%|!");
         }
 
         private static string[] Get(string numbers)
         {
-            int newLineIndex = numbers.IndexOf('\n');
-            if (numbers.Length > 2)
-            {
-                if (numbers[0] == '/')
-                {
-                    numbers = numbers.Substring(newLineIndex+1);
-                }
-            }
+            StringValidator validator = new StringValidator();
+            numbers = validator.Validate(numbers);
             return Split(numbers);
         }
+
+        private static string[] Split(string numbers)
+        {
+            return numbers.Split(new[] { '\n', '[', ']', ',', ';', '#', '@', '%', '!','*'}, StringSplitOptions.RemoveEmptyEntries);     
+        }
+
+        private static int Calculate(string[] numbersToAdd)
+        {
+            var total = 0;
+            for (int i = 0; i < numbersToAdd.Length; i++)
+            {
+                var number = int.Parse(numbersToAdd[i]);
+                if (number <= 1000)
+                {
+                    total += number;
+                }
+            }
+            return total;
+        }
+
     }
 }
