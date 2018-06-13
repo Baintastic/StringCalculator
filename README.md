@@ -1,2 +1,3 @@
 # String Calculator
-A C# implementation of the String Calculator Kata
+
+## A C# implementation of the StringCalculator kata 
