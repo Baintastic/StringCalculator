@@ -50,7 +50,7 @@ namespace StringCalculator.Tests
         [TestCase(15, "1,2,3,4,5")]
         [TestCase(85, "25,25,20,10,5")]
         [TestCase(10, "1,1,1,1,1,1,1,1,1,1")]
-        public void Add_GivenUnknownNumbers_ShouldReturnTheSum(int expected, string numbers)
+        public void Add_GivenUnknownAmountOfNumbers_ShouldReturnTheSum(int expected, string numbers)
         {
             //---------------Arrange-------------------
             var sut = CreateStringCalculator();
@@ -99,10 +99,21 @@ namespace StringCalculator.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(10, "//[@][#][$][%][;]\n1#1@6%2")]
         [TestCase(7, "//[******]\n2******1******3******1")]
-        [TestCase(16, "//[@@][*]\n5@@2\n6*3")]
-        public void Add_GivenNumbersWithMultipleDelimitersOfAnylength_ShouldReturnTheSum(int expected, string numbers)
+        [TestCase(16, "//[@@]\n5@@2\n6@@3")]
+        public void Add_GivenNumbersWithMultipleCharacterDelimiters_ShouldReturnTheSum(int expected, string numbers)
+        {
+            //---------------Arrange-------------------
+            var sut = CreateStringCalculator();
+            //---------------Act ----------------------
+            var actual = sut.Add(numbers);
+            //---------------Assert -----------------------
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(10, "//[@][###][$][%][;]\n1###1@6%2")]
+        [TestCase(6, "//[**][%]\n1**2%3")]
+        public void Add_GivenNumbersWithMultipleDelimiters_ShouldReturnTheSum(int expected, string numbers)
         {
             //---------------Arrange-------------------
             var sut = CreateStringCalculator();

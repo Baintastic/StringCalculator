@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace StringCalculator
 {
@@ -19,17 +16,6 @@ namespace StringCalculator
             return numbers;
         }
 
-        private static string CutOffDelimiter(string numbers)
-        {
-            int newLineIndex = numbers.IndexOf('\n');
-            if (numbers[0] == '/')
-            {
-                numbers = numbers.Substring(newLineIndex + 1);
-            }
-
-            return numbers;
-        }
-
         private static void CheckForNegative(string numbers)
         {
             string negatives = "";
@@ -39,6 +25,17 @@ namespace StringCalculator
             {
                 ThrowException(negatives);
             }
+        }
+
+        private static string CutOffDelimiter(string numbers)
+        {
+            int newLineIndex = numbers.IndexOf('\n');
+            if (numbers[0] == '/')
+            {
+                numbers = numbers.Substring(newLineIndex + 1);
+            }
+
+            return numbers;
         }
 
         private static string Get(string numbers, string negatives)
